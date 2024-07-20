@@ -18,7 +18,7 @@ export async function GET(req: Request) {
     try {
         const response = await gmail.users.messages.list({
             userId: 'me',
-            maxResults: 10 // Fetch last 10 emails
+            maxResults: 15 // Fetch last 10 emails
         })
 
         const emails = await Promise.all(
